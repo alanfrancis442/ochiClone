@@ -5,8 +5,8 @@ import { FaArrowUpLong } from "react-icons/fa6";
 function Landing() {
     return ( 
         <>
-        <div className="h-screen w-full p-1">
-            <div className="uppercase overflow-hidden mx-20 mt-52 font-['Founders Grotesk'] text-9xl tracking-tighter font-bold">
+        <div data-scroll data-scroll-section data-scroll-speed="-.5" className="h-screen w-full p-1">
+            <div className="uppercase overflow-hidden mx-20 mt-52 font-['Founders Grotesk'] text-8xl leading-none tracking-tighter font-bold">
                <div>
                 <p>WE CREATE</p>
                </div>
@@ -30,7 +30,7 @@ function Landing() {
                 <p>PRESENTATIONS</p>
                </div>
             </div>
-            <div className="pt-40">
+            <div className="pt-16">
                 <hr className="w-full h-[1.5px] bg-black" />
                 <div className="flex items-center px-20 justify-between py-10">
                     <div>
