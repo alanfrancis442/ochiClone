@@ -5,6 +5,7 @@ import Scroller from "./scroller";
 import Hero1 from "./hero1";
 import Eyes from "./eyes";
 import Projects from "./projects";
+import Reviews from "./reviews";
 export default function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ export default function Home() {
     <Hero1 />
     <Eyes />
     <Projects />
+    <Reviews />
     </>
   );
 }

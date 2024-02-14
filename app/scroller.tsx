@@ -8,9 +8,9 @@ function Scroller() {
           {[0, 0, 0, 0, 0].map((e) => {
             return (
               <motion.div
-                // animate={{
-                //   x: "-100%",
-                // }}
+                animate={{
+                  x: "-100%",
+                }}
                 transition={{
                   duration: 15,
                   repeat: Infinity,
