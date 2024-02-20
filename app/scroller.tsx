@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Scroller() {
   return (
     <>
-      <div className="bg-[#004D43] rounded-t-xl py-32 mt-[10%]">
+      <div data-scroll data-scroll-section data-scroll-speed="-.1" className="bg-[#004D43] rounded-t-xl py-24 mt-[15%]">
         <div className="overflow-hidden flex border-t-[1px] border-b-[1px] p-4 border-white">
           {[0, 0, 0, 0, 0].map((e) => {
             return (
