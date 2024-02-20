@@ -7,8 +7,14 @@ import Eyes from "./eyes";
 import Projects from "./projects";
 import LocomotiveScroll from 'locomotive-scroll';
 import Reviews from "./reviews";
+import Footer from "./footer";
+import { useEffect } from "react";
+import { ImPriceTag } from "react-icons/im";
 export default function Home() {
-  const locomotiveScroll = new LocomotiveScroll();
+  useEffect(()=>{
+    const locomotiveScroll = new LocomotiveScroll();
+
+  },[])
   return (
     <>
     <Nav />
@@ -18,6 +24,7 @@ export default function Home() {
     <Eyes />
     <Projects />
     <Reviews />
+    <Footer />
     </>
   );
 }

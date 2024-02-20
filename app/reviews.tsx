@@ -1,11 +1,9 @@
 function Reviews() {
     return ( 
-        <>
-         this is the review component
-         <div>
-            <h1>Clients’ reviews</h1>
+       <div className="bg-red-600 h-screen mt-[80%]">
+            this is the review component
+            <h1>Client's reviews</h1>
          </div>
-        </>
      );
 }
 

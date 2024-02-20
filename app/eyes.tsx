@@ -1,7 +1,6 @@
 function Eyes() {
     return ( 
-        <>
-            <div className="h-[100vh] bg-no-repeat bg-cover w-full flex justify-center items-center
+            <div data-scroll data-scroll-section data-scroll-speed="-.5" className="-z-10 relative h-[100vh] bg-no-repeat bg-cover w-full flex justify-center items-center
             bg-[url(https://ochi.design/wp-content/uploads/2022/05/Top-Viewbbcbv-1-scaled.jpg)]
             ">
                 <div className="h-4 flex gap-5">
@@ -17,7 +16,6 @@ function Eyes() {
                     </div>
                 </div>
             </div>
-        </>
      );
 }
 

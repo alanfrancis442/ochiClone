@@ -70,7 +70,7 @@ function Projects() {
     ]
     return ( 
         <>
-        <div className="h-screen w-full">
+        <div className="h-screen w-full bg-white">
             <h1 className="p-20 pb-10 tracking-tight text-7xl">
                 projects
             </h1>
