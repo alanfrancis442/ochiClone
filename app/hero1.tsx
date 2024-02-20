@@ -2,17 +2,23 @@
 import { motion } from "framer-motion"
 import { useState } from "react";
 import { useAnimate } from "framer-motion";
-useState
 function Hero1() {
 
   const  [scope,animate] = useAnimate()
 
   const imgHandeler = ()=>{
     //
-    animate('.image',{
+    animate('.imageContainer',{
       scale:0.980,
     },{
       duration:0.5
+    })
+
+    animate('.image',{
+      scale:1.1,
+    },
+    {
+      duration:0.5,
     })
 
     animate('button',{
@@ -22,12 +28,20 @@ function Hero1() {
 
   const imgrmHandeler = ()=>{
     //
-    animate('.image',{
+    animate('.imageContainer',{
       scale:1,
     },
     {
       duration:0.5
     })
+
+    animate('.image',{
+      scale:1,
+    },
+    {
+      duration:0.5,
+    })
+
   }
 
   return (
@@ -62,8 +76,8 @@ function Hero1() {
                     read more 
                 </button>
             </div>
-            <div className="w-1/2">
-                <img className="image rounded-3xl" src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-1326x939.jpg" alt="image" />
+            <div className="w-1/2 imageContainer rounded-3xl overflow-hidden">
+                <img className=" image object-contain" src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-1326x939.jpg" alt="image" />
             </div>
         </div>
       </div>
