@@ -8,6 +8,7 @@ import Projects from "./projects";
 import LocomotiveScroll from 'locomotive-scroll';
 import Reviews from "./reviews";
 import Footer from "./footer";
+import Cards from "./cards";
 import { useEffect } from "react";
 import { ImPriceTag } from "react-icons/im";
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
     <Eyes />
     <Projects />
     <Reviews />
+    <Cards />
     <Footer />
     </>
   );

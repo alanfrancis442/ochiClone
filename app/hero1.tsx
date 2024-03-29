@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion"
+import { easeOut, motion } from "framer-motion"
 import { useState } from "react";
 import { useAnimate } from "framer-motion";
 function Hero1() {
@@ -9,9 +9,10 @@ function Hero1() {
   const imgHandeler = ()=>{
     //
     animate('.imageContainer',{
-      scale:0.980,
+      scale:0.970,
     },{
-      duration:0.5
+      duration:0.5,
+      ease:easeOut,
     })
 
     animate('.image',{
@@ -19,6 +20,7 @@ function Hero1() {
     },
     {
       duration:0.5,
+      ease:easeOut,
     })
 
     animate('button',{
