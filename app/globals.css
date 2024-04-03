@@ -37,6 +37,35 @@
 .anibtn:hover::after{
 transform: translatey(-50%);
 }
+
+@font-face {
+  font-family: founder;
+  src: url(/FoundersGrotesk-Semibold\ \(1\).ttf);
+}
+.footerdiv{
+  font-family: founder; 
+}
+
+.link-a{
+  height:1px;
+  width: 100%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translateX(-100%);
+}
+.link-b{
+  height:1px;
+  width: 100%;
+  background-color: black;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translateX(0%);
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -1,12 +1,46 @@
-import React from 'react'
+'use client'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import React,{useRef} from 'react'
 
 export default function Footer() {
+  const linkcontainer = useRef(null!)
+
+  const hoverHandeler = (n)=>{
+    let tl = gsap.timeline()
+    console.log(n)
+    tl.to(`.${n}-b`,{
+      x:"100%",
+      duration:0.5
+    })
+    tl.to(`.${n}-a`,{
+      x:"100%",
+    })
+    // tl.to(`.n-${n}`,{
+    //   x:"0%",
+    // })
+    // useGSAP(()=>{ 
+  
+    // },{scope:linkcontainer})
+  }
+  const hoverHandelerrm = (n)=>{
+    let tl = gsap.timeline()
+    console.log(n)
+    tl.to(`.${n}-b`,{
+      x:"0%",
+    })
+    tl.to(`.${n}-a`,{
+      x:"-100%",
+    })
+  }
+
+
   return (
-    <div className='flex justify-between bg-zinc-100 pt-28 h-screen'>
-      <div className='p-10 flex flex-col w-1/2 justify-between h-full'>
-        <div className='flex flex-col text-6xl tracking-tighter'>
-        <p>EYE-</p>
-        <p>OPENING</p>
+    <div className='flex justify-between bg-zinc-100 h-screen'>
+      <div className='p-20 flex flex-col w-1/2 justify-between h-full'>
+        <div className='flex flex-col'>
+        <p className='text-[12rem] leading-[0.7] footerdiv'>EYE-</p>
+        <p className='text-[12rem] leading-[0.7] footerdiv'>OPENING</p>
         </div>
         <div>
         <svg width="72" height="30" viewBox="0 0 72 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,8 +52,74 @@ export default function Footer() {
 					</svg>
         </div>
       </div>
-      <div className='tracking-[-0.2rem]'>
-        <p className='text-6xl'>PRESENTATIONS</p>
+      <div className='px-20' ref={linkcontainer}>
+        <p className='footerdiv text-[11rem]'>PRESENTATIONS</p>
+        <div className='flex justify-between'>
+          <div className='flex flex-col text-xl tracking-tighter'>
+            <div>
+              <div className='py-6'>
+                S:
+              </div>
+              <ul>
+                {
+                  ['Instagram','Behance','Facebook','Linkedin'].map((e,i)=>(
+                    <li key={i} className='link cursor-pointer overflow-hidden relative' onMouseLeave={()=>{hoverHandelerrm(e)}} onMouseOver={()=>{hoverHandeler(e)}}>
+                      <div className={`${e}-b link-b`}></div>
+                      <div className={`${e}-a link-a`}></div>
+                      {e}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div>
+              <div className='py-6'>
+                L:
+              </div>
+              <ul>
+                {
+                  ['202-1965 W 4th Ave','Vancouver, Canada','30 Chukarina St','Lviv, Ukraine'].map((e,i)=>(
+                    <li key={i} className={`link cursor-pointer overflow-hidden relative ${i==1 ?'pb-5':''}`} onMouseLeave={()=>{hoverHandelerrm(e)}} onMouseOver={()=>{hoverHandeler(e)}}>
+                      <div className={`${e}-b link-b n-1`}></div>
+                      <div className={`${e}-a link-a`}></div>
+                      {e}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+            <div>
+              <div className='py-6'>
+                E:
+              </div>
+              <ul>
+                <li className='link cursor-pointer overflow-hidden relative' onMouseLeave={()=>{hoverHandelerrm('E')}} onMouseOver={()=>{hoverHandeler('E')}}>
+                  <div className={`E-b link-b n-9`}></div>
+                  <div className={`E-a link-a`}></div>
+                  hello@ochi.design</li>
+              </ul>
+            </div>
+            <div></div>
+          </div>
+          <div>
+          <div className='flex h-full w-full flex-col justify-center items-center text-xl tracking-tighter'>
+              <div className='py-6'>
+                M:
+              </div>
+              <ul>
+                {
+                  ['Home','Services','Our work','About us','Insights','Contact us'].map((e,i)=>(
+                    <li key={i} className='link cursor-pointer overflow-hidden relative' onMouseLeave={()=>{hoverHandelerrm(e)}} onMouseOver={()=>{hoverHandeler(e)}}>
+                      <div className={`${e}-b link-b`}></div>
+                      <div className={`${e}-a link-a`}></div>
+                      {e}
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
