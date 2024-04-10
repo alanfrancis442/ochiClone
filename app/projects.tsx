@@ -104,7 +104,7 @@ function Projects() {
                 projects
             </h1>
             <hr className="w-full h-[1.5px] bg-black" />
-            <div ref={scope1} className="h-screen w-full p-10 grid gap-4 grid-cols-2 relative">
+            <div ref={scope1} className="h-screen w-full p-10 grid gap-4 lg:grid-cols-2 relative">
               <div className="div1 absolute text-[#CDEA68] tracking-tighter font-bold w-1/2 top-[50%] -translate-y-[50%] left-[25%] text-8xl flex justify-center items-center z-40 h-1/5">
                 {div1Content.split("").map((e,i)=>{
                   return <motion.span

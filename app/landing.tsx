@@ -6,7 +6,7 @@ function Landing() {
     return ( 
         <>
         <div data-scroll data-scroll-section data-scroll-speed="-.5" className="h-screen w-full p-1">
-            <div className="uppercase overflow-hidden mx-20 mt-52 font-['Founders Grotesk'] text-9xl font-extrabold leading-none tracking-tight">
+            <div className="uppercase overflow-hidden lg:mx-20 mx-5 lg:mt-52 mt-32 font-['Founders Grotesk'] lg:text-9xl text-3xl font-extrabold leading-none tracking-tight">
                <div>
                 <p className="footerdiv">WE CREATE</p>
                </div>
@@ -23,7 +23,7 @@ function Landing() {
                 duration:3
                }}
                className="flex items-center overflow-hidden">
-                <img className="h-[100%] rounded-3xl" src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="" />
+                <img className="lg:h-[100%] h-[8vh] rounded-3xl" src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="" />
                 <p className="footerdiv">EYE-OPENING</p>
                </motion.div>
                <div>

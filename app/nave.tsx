@@ -1,4 +1,30 @@
+'use client'
+import { hoverHandeler, rmspace } from "./footer";
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import React,{useRef} from 'react'
 function Nav() {
+    const hoverHandelerrm = (n)=>{
+        let tl = gsap.timeline()
+        console.log(n)
+        tl.to(`.${n}-2`,{
+          x:"-100%"
+        })
+        tl.to(`.${n}-1`,{
+          x:"-100%"
+        })
+    }
+
+    const hoverHandeler = (n)=>{
+        let tl = gsap.timeline()
+        console.log(n)
+        tl.to(`.${n}-2`,{
+          x:"100%"
+        })
+        tl.to(`.${n}-1`,{
+          x:"100%"
+        })
+    }
     return ( 
         <>
         <nav className="fixed bg-[rgba(0,0,0,0)] backdrop-blur-md z-50 flex py-10 px-20 text-xl font-['Neue Montreal'] w-full justify-between">
@@ -12,13 +38,23 @@ function Nav() {
 								</svg>
                 </div>
 
-            <div className="flex gap-10">
-                <button className="ml-96">Services</button>
-                <button>our works</button>
-                <button>About us</button>
-                <button>Insights</button>
-            </div>
-            <div>contact us</div>
+            <ul className="flex gap-10">
+                {//ml-96
+                    ['Services','Our works','About us','Insights'].map((e,i)=>(
+                        <li key={i} className={`link cursor-pointer overflow-hidden relative${i==0?' ml-96':''}`} onMouseLeave={()=>{hoverHandelerrm(rmspace(e))}} onMouseOver={()=>{hoverHandeler(rmspace(e))}}>
+                      <div className={`${rmspace(e)}-2 link-2`}></div>
+                      <div className={`${rmspace(e)}-1 link-1`}></div>
+                      {e}
+                    </li>
+                    ))
+                }
+
+            </ul>
+            <div className={`link cursor-pointer overflow-hidden relative`} onMouseLeave={()=>{hoverHandelerrm(rmspace('contact us'))}} onMouseOver={()=>{hoverHandeler(rmspace('contact us'))}}>
+                      <div className={`${rmspace('contact us')}-2 link-2`}></div>
+                      <div className={`${rmspace('contact us')}-1 link-1`}></div>
+                      Contact us
+                    </div>
         </nav>
         </>
      );
