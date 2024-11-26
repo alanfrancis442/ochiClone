@@ -5,10 +5,10 @@ import { FaArrowUpLong } from "react-icons/fa6";
 function Landing() {
     return ( 
         <>
-        <div className="h-screen w-full p-1">
-            <div className="uppercase overflow-hidden mx-20 mt-52 font-['Founders Grotesk'] text-9xl tracking-tighter font-bold">
+        <div data-scroll data-scroll-section data-scroll-speed="-.5" className="h-screen w-full p-1">
+            <div className="uppercase overflow-hidden lg:mx-20 mx-5 lg:mt-52 mt-32 font-['Founders Grotesk'] lg:text-9xl text-3xl font-extrabold leading-none tracking-tight">
                <div>
-                <p>WE CREATE</p>
+                <p className="footerdiv">WE CREATE</p>
                </div>
 
                <motion.div
@@ -23,14 +23,14 @@ function Landing() {
                 duration:3
                }}
                className="flex items-center overflow-hidden">
-                <img className="h-[100%] rounded-3xl" src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="" />
-                <p className="">EYE-OPENING</p>
+                <img className="lg:h-[100%] h-[8vh] rounded-3xl" src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt="" />
+                <p className="footerdiv">EYE-OPENING</p>
                </motion.div>
                <div>
-                <p>PRESENTATIONS</p>
+                <p className="footerdiv">PRESENTATIONS</p>
                </div>
             </div>
-            <div className="pt-40">
+            <div className="pt-16">
                 <hr className="w-full h-[1.5px] bg-black" />
                 <div className="flex items-center px-20 justify-between py-10">
                     <div>
